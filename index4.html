@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alizay Nadeem - Personal Portfolio</title>
+    <link rel="icon" type="image/png" href="cleanCode.jpeg">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Navigation */
+        nav {
+            background-color: teal;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+        /* Header */
+        #image {
+            background-image: url("html.jpeg");
+            background-size: cover;
+            padding: 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        #image h2 {
+            margin: 10px 0;
+        }
+        #image h2:first-child {
+            font-size: 2.5em;
+        }
+        #image h2:nth-child(2) {
+            font-size: 2em;
+        }
+        #image h2:nth-child(3) {
+            font-size: 1.5em;
+        }
+        /* Sections */
+        section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #009879;
+            margin-top: 0;
+        }
+        /* Education Section */
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        .education-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            list-style-type: none;
+        }
+        .education-item h3 {
+            color: #009879;
+            margin-bottom: 10px;
+        }
+        .education-item p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        /* Skills Section */
+        .skill-item h3 {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        .experience-item h3 {
+            color: #009879;
+            margin-bottom: 10px;
+        }
+        .experience-item p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+        blockquote {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-left: 3px solid #009879;
+        }
+        blockquote p {
+            margin: 0;
+        }
+        blockquote cite {
+            display: block;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        /* Projects Section */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        table th, table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dddddd;
+        }
+        table tbody tr:last-of-type td {
+            border-bottom: 2px solid #009879;
+        }
+        /* Contact Section */
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        form button[type="submit"] {
+            background-color: #009879;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease-in-out;
+        }
+        form button[type="submit"]:hover {
+            background-color: #007f65;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+        footer address {
+            margin: 0;
+	    color:teal;
+        }
+    </style>       </head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div id="image">
+    <header id="home" class="container">
+        <h2>Alizay Nadeem</h2>
+        <h2>Web Developer</h2>
+        <h2>Creating innovative web solutions</h2>
+    </header>
+</div>
+
+<main class="container">
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <h3>Matric Level</h3>
+                <p>Matric in Science</p>
+                <p>Duration: 2 Years</p>
+                <p>Focus Areas: Biology, Physics, Chemistry</p>
+                <p>Methodology: Course
+
+
+work, Exams</p>
+                <h3>Inter in Science</h3>
+                <p>Duration: 2 Years</p>
+                <p>Emphasis: Advanced Biology, Chemistry, and Physics</p>
+            </div>
+            <div class="education-item">
+                <h3>Undergraduate Degree</h3>
+                <p>Bachelor’s Degree in Computer Science</p>
+                <p>Completion Time: 4 Years</p>
+                <p>Core Curriculum: Programming, Algorithms, Data Structures, Computer Architecture, Databases, Software Engineering</p>
+                <p>Courses and Specializations</p>
+                <p>Elective Courses: Artificial Intelligence, Cybersecurity, Machine Learning, Web Development</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-item"><p>Programming Languages: Python, Java, C++</p></div>
+        <div class="skill-item"><p>Web Development: HTML, CSS, JavaScript, React</p></div>
+        <div class="skill-item"><p>Databases: MySQL, PostgreSQL, MongoDB</p></div>
+        <div class="skill-item"><p>Tools: Git, Docker, AWS</p></div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Certifications</h3>
+            <p>Valuable certifications from organizations like Microsoft, Cisco, and AWS validate specific technical skills.</p>
+            <p>Continued learning through workshops and bootcamps ensures skill relevance.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Staying Updated</h3>
+            <p>Attending industry conferences and seminars is essential for staying abreast of trends and networking.</p>
+            <p>Regular reading of academic journals and following influential figures in computer science is paramount.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Soft Skills and Interdisciplinary Knowledge</h3>
+            <p>Effective communication fosters collaboration, especially in interdisciplinary teams and when conveying complex concepts.</p>
+            <p>Strong problem-solving and analytical skills are vital for algorithm development and code optimization.</p>
+            <p>Understanding the application of computer science in fields like bioinformatics, fintech, and computational social science is advantageous.</p>
+            <blockquote>
+                <p>Practical experience through internships during undergraduate studies is crucial, providing hands-on industry exposure and potential job opportunities.</p>
+                <cite>Alizay Nadeem</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects and Research</h2>
+        <table>
+            <tr>
+                <th>Project</th>
+                <th>Description</th>
+                <th>Technologies</th>
+            </tr>
+            <tr>
+                <td>Project 1</td>
+                <td>Making a Website</td>
+                <td>HTML, CSS, JavaScript</td>
+            </tr>
+            <tr>
+                <td>Project 2</td>
+                <td>Managing Databases</td>
+                <td>SQL, SQLite</td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<!-- Contact Form Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- JavaScript for Form Validation -->
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            alert('Please fill out all fields!');
+            e.preventDefault();
+        }
+    });
+</script>
+
+<footer>
+    <address>
+        Written by Alizay Nadeem<br>
+        Visit us at: AlizayNadeemportfolio.com<br>
+        UMT, Lahore<br>
+        Pakistan
+    </address>
+</footer>
+
+</body>
+</html>
